@@ -18,19 +18,19 @@ var blockHr = document.querySelectorAll(".time-block")
 for( i=0; i < blockHr.length; i++ ){
 blockHr.textContent = i
 console.log(blockHr.textContent)
-//if the current hr is less than the listed hr use css styling for past
+//if the current hr is less than the listed hr use css styling for past(grey)
 if ( (9 + (i)) < currentHr ){
     blockHr[i].classList.add("past")
     console.log('past')
     }
-    //if the current hr == the listed hr use css styling for current
+    //if the current hr == the listed hr use css styling for current(red)
     else if (( 9 + (i)) == currentHr ) {
     blockHr[i].classList.remove("past");
     blockHr[i].classList.add("present");
     console.log("present");
     }
     else {
-    //and if the current hr is greater than the listed hr use css styling for future    
+    //and if the current hr is greater than the listed hr use css styling for future(Green)   
     blockHr[i].classList.remove("past");
     blockHr[i].classList.remove("present")
     blockHr[i].classList.add("future")
